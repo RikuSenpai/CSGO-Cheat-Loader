@@ -21,7 +21,7 @@ namespace Beta_Loader
             SealCheck.HashChecks(); //Checks the integrity of the TrinitySeal and Newtonsoft DLL
             if (SealCheck.isValidDLL)
             {
-                Seal.Secret = "UvR83LYzoZi8efOz6ZGw0sIGKRev6p0RUzz9nbpel6VqK"; //Sets your program secret throughout the program
+                Seal.Secret = "program secret"; //Sets your program secret throughout the program
                 Seal.Initialize("1.0"); //Carries out auto-update and grabs program variables
             }
         }
@@ -47,7 +47,7 @@ namespace Beta_Loader
                 {
                     /* Arguments in order: variable key, program token, username, password */
                     /* Username and password is required as the user must be logged in to retrieve variables */
-                    Seal.GrabVariables("eg3zMbcHsgUBQr5ihPOaPnzao", "UvR83LYzoZi8efOz6ZGw0sIGKRev6p0RUzz9nbpel6VqK", Username.Text, Password.Text);
+                    Seal.GrabVariables("variables token", "program secret", Username.Text, Password.Text);
 
                     Main form = new Main(); //create a new main form
                     this.Hide(); //hide this form
